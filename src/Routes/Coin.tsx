@@ -142,7 +142,10 @@ quotes: {
 };
 }
 
-function Coin() {
+interface ICoinProps {}
+
+
+function Coin({}: ICoinProps) {
     const { coinId } = useParams();
     const { state } = useLocation() as RouteState;
     const priceMatch = useMatch("/:coinId/price");
